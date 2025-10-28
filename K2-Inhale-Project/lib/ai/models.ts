@@ -20,7 +20,7 @@ export const chatModels: ChatModel[] = [
   },
     {
     id: "Machine-Value-reasoning",
-    name: "Grok Reasoning",
+    name: "Machine Value",
     description:
       "Uses advanced chain-of-thought reasoning for complex problems",
   },
