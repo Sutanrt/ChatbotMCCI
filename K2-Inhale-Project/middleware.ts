@@ -17,11 +17,11 @@ export async function middleware(request: NextRequest) {
   //   return NextResponse.next();
   // }
 
-  const token = await getToken({
-    req: request,
-    secret: process.env.AUTH_SECRET,
-    secureCookie: !isDevelopmentEnvironment,
-  });
+  // const token = await getToken({
+  //   req: request,
+  //   secret: process.env.AUTH_SECRET,
+  //   secureCookie: !isDevelopmentEnvironment,
+  // });
 
   // if (!token) {
   //   const redirectUrl = encodeURIComponent(request.url);
