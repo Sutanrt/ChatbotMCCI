@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { getToken } from "next-auth/jwt";
-// import { guestRegex, isDevelopmentEnvironment } from "./lib/constants.edge";
+// import { getToken } from "next-auth/jwt";
+import { guestRegex, isDevelopmentEnvironment } from "./lib/constants.edge";
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -17,19 +17,19 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const token = await getToken({
-    req: request,
-    secret: process.env.AUTH_SECRET,
-    // secureCookie: !isDevelopmentEnvironment,
-  });
+  // const token = await getToken({
+  //   req: request,
+  //   secret: process.env.AUTH_SECRET,
+  //   // secureCookie: !isDevelopmentEnvironment,
+  // });
 
-  if (!token) {
-    const redirectUrl = encodeURIComponent(request.url);
+  // if (!token) {
+  //   const redirectUrl = encodeURIComponent(request.url);
 
-    return NextResponse.redirect(
-      new URL(`/api/auth/guest?redirectUrl=${redirectUrl}`, request.url)
-    );
-  }
+  //   return NextResponse.redirect(
+  //     new URL(`/api/auth/guest?redirectUrl=${redirectUrl}`, request.url)
+  //   );
+  // }
 
   // const isGuest = guestRegex.test(token?.email ?? "");
 
