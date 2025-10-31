@@ -3,19 +3,19 @@ import { getToken } from "next-auth/jwt";
 import { guestRegex, isDevelopmentEnvironment } from "./lib/constants.edge";
 
 export async function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  // const { pathname } = request.nextUrl;
 
-  /*
-   * Playwright starts the dev server and requires a 200 status to
-   * begin the tests, so this ensures that the tests can start
-   */
-  if (pathname.startsWith("/ping")) {
-    return new Response("pong", { status: 200 });
-  }
+  // /*
+  //  * Playwright starts the dev server and requires a 200 status to
+  //  * begin the tests, so this ensures that the tests can start
+  //  */
+  // if (pathname.startsWith("/ping")) {
+  //   return new Response("pong", { status: 200 });
+  // }
 
-  if (pathname.startsWith("/api/auth")) {
-    return NextResponse.next();
-  }
+  // if (pathname.startsWith("/api/auth")) {
+  //   return NextResponse.next();
+  // }
 
   const token = await getToken({
     req: request,
