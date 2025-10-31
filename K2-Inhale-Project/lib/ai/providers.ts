@@ -27,6 +27,7 @@ export const myProvider = isTestEnvironment
       languageModels: {
         "chat-model": gateway.languageModel("openai/gpt-5"),
         "Machine-Value-reasoning": gateway.languageModel("openai/gpt-5"),
+        "MCI-Tag-reasoning": gateway.languageModel("openai/gpt-5"),
         "chat-model-reasoning": wrapLanguageModel({
           model: gateway.languageModel("xai/grok-3-mini"),
           middleware: extractReasoningMiddleware({ tagName: "think" }),
