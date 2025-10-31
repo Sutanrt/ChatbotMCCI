@@ -43,6 +43,7 @@ import type { AppUsage } from "@/lib/usage";
 import { convertToUIMessages, generateUUID } from "@/lib/utils";
 import { generateTitleFromUserMessage } from "../../actions";
 import { type PostRequestBody, postRequestBodySchema } from "./schema";
+export const runtime = "nodejs";
 import { buildLLMContextForUserQuery } from "@/lib/domain-service";
 
 
