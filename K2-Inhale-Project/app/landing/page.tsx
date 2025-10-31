@@ -1,11 +1,11 @@
 // app/landing/page.tsx
 import Link from "next/link";
-import { BackgroundWaves } from "@/components/backGroundWaves";
+// import { BackgroundWaves } from "@/components/backGroundWaves";
 export default function LandingPreviewPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-white flex flex-col">
       {/* NAVBAR */}
-      <BackgroundWaves/>
+      {/* <BackgroundWaves/> */}
       <header className="w-full max-w-7xl mx-auto flex items-center justify-between py-6 px-6">
         <div className="text-lg font-semibold tracking-tight">
           <span className="text-emerald-400">MCI</span> AI Assistant
