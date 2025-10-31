@@ -12,4 +12,5 @@ export const isTestEnvironment = Boolean(
 );
 
 // Sesuaikan dengan token email guest: "guest-123@..." → match
-export const guestRegex = /^guest-\d+@/i;
+export const guestRegex = /^guest-\d+$/;
+export const guestEmailRegex = /^guest-\d+@/i;
