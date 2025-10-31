@@ -18,7 +18,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { guestRegex } from "@/lib/constants";
+import { guestRegex } from "@/lib/constants.edge";
 import { LoaderIcon } from "./icons";
 import { toast } from "./toast";
 
